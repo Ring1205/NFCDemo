@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/item_img"
+        android:layout_marginTop="@dimen/size_8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:padding="@dimen/size_5"
+        android:scaleType="centerCrop"
+        android:src="@drawable/icon_corner_add" />
+
+    <TextView
+        android:id="@+id/item_delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/size_3"
+        android:layout_alignRight="@+id/item_img"
+        android:textColor="@color/red"
+        android:textSize="@dimen/size_25"
+        android:text="✘"/>
+</RelativeLayout>

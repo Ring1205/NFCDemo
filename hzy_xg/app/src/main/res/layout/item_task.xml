@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:paddingTop="@dimen/size_20"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/tv_task_name"
+        android:layout_width="match_parent"
+        android:gravity="left|center"
+        android:layout_toLeftOf="@+id/tv_task_state"
+        android:layout_height="wrap_content"
+        style="@style/text_title_style"
+        android:text="任务名称："/>
+
+    <TextView
+        android:id="@+id/tv_task_state"
+        android:layout_width="wrap_content"
+        android:gravity="right|center"
+        android:layout_alignParentRight="true"
+        android:layout_height="wrap_content"
+        style="@style/text_title_style"
+        android:text="未开始"/>
+
+    <TextView
+        android:id="@+id/tv_label_name"
+        android:layout_below="@+id/tv_task_name"
+        android:textSize="@dimen/size_14"
+        android:layout_width="match_parent"
+        android:gravity="left"
+        android:layout_marginTop="@dimen/size_8"
+        android:layout_height="wrap_content"
+        style="@style/text_title_style"
+        android:text="关联标签：name"/>
+
+    <TextView
+        android:id="@+id/tv_task_style"
+        android:layout_width="wrap_content"
+        android:textSize="@dimen/size_14"
+        style="@style/text_title_style"
+        android:layout_marginTop="@dimen/size_8"
+        android:text="设备状态：正常"
+        android:layout_below="@+id/tv_label_name"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/tv_time_interval"
+        android:layout_width="wrap_content"
+        android:textSize="@dimen/size_12"
+        android:textColor="@color/text_gray_color"
+        android:singleLine="true"
+        android:text="2018-11-10 00:00 ~ 2018-11-11 24:00"
+        android:layout_alignBottom="@+id/tv_task_style"
+        android:layout_marginRight="@dimen/size_15"
+        android:layout_alignParentRight="true"
+        android:ellipsize="end"
+        android:layout_height="wrap_content" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/tv_time_interval"
+        android:layout_marginTop="@dimen/size_16"
+        android:background="@color/color_ccc"/>
+</RelativeLayout>

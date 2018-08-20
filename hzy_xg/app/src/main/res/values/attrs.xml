@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="PickerView">
+        <attr name="isLoop" format="boolean" />
+    </declare-styleable>
+
+    <string-array name="scan_style">
+        <item>☯</item>
+        <item>☢</item>
+        <item>♨</item>
+        <item>♪</item>
+        <item>卐</item>
+        <item>卍</item>
+        <item>㊉</item>
+        <item>☪</item>
+        <item> ✌</item>
+        <item>۞</item>
+        <item>❤</item>
+        <item>☊</item>
+        <item>๑</item>
+        <item>◎</item>
+        <item>♝</item>
+        <item>♘</item>
+        <item>巡</item>
+        <item>☣</item>
+        <item>查</item>
+        <item>☠</item>
+    </string-array>
+    <string-array name="spinner_style">
+        <!--<item>正常</item>-->
+        <item>异常</item>
+        <!--<item>警报</item>-->
+    </string-array>
+</resources>

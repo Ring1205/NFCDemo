@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/rl_background"
+        android:layout_width="wrap_content"
+        android:layout_margin="@dimen/size_68"
+        android:layout_centerInParent="true"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="centerInside"
+            android:src="@mipmap/back_nfc" />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_height="wrap_content">
+        <ProgressBar
+            android:id="@+id/pb_scan"
+            android:layout_marginTop="@dimen/size_68"
+            android:layout_width="@dimen/size_50"
+            android:indeterminateDrawable="@drawable/progressbar_white"
+            android:layout_height="@dimen/size_50"
+            android:visibility="invisible"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/size_20"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="@dimen/size_25"
+        android:layout_marginRight="@dimen/size_25"
+        android:background="@drawable/corner_green_35_solid"
+        android:onClick="onClick"
+        android:text="开始扫描"
+        android:id="@+id/bt_scan"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/size_16" />
+
+</RelativeLayout>

@@ -1,0 +1,185 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.zxycloud.hzy_xg.ui.fragment.MineFragment"
+    tools:ignore="RtlHardcoded,RtlSymmetry,SpUsage,ContentDescription">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        tools:ignore="UselessParent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/mine_account"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true">
+
+                            <ImageView
+                                android:id="@+id/mine_header"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentStart="true"
+                                android:layout_alignParentTop="true"
+                                android:layout_marginLeft="@dimen/common_padding"
+                                android:contentDescription="@string/about_me"
+                                android:src="@mipmap/header_mine" />
+                        </RelativeLayout>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/common_padding"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:id="@+id/mine_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/color_333"
+                            android:textSize="@dimen/size_18" />
+
+                        <TextView
+                            android:id="@+id/mine_telephone"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/mine_name"
+                            android:layout_marginTop="@dimen/size_5"
+                            android:textColor="@color/text_phone"
+                            android:textSize="@dimen/size_14" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <include layout="@layout/horizontal_line" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size_5"
+                    android:background="@color/divider_line_color" />
+
+                <include layout="@layout/horizontal_line" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size_5"
+                    android:background="@color/divider_line_color" />
+
+                <LinearLayout
+                    android:id="@+id/mine_questions"
+                    android:layout_width="match_parent"
+                    android:layout_height="47dp"
+                    android:gravity="center_vertical"
+                    android:visibility="invisible"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/size_30">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="@string/questions"
+                        android:src="@mipmap/question"
+                        android:tint="@color/green" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/size_20"
+                        android:layout_weight="1"
+                        android:text="@string/questions"
+                        android:textColor="@color/color_333"
+                        android:textSize="@dimen/size_17" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/common_padding"
+                        android:contentDescription="@string/next"
+                        android:src="@mipmap/next_page"
+                        android:tint="@color/green" />
+                </LinearLayout>
+
+                <include layout="@layout/horizontal_line"
+                    android:visibility="invisible"/>
+
+                <LinearLayout
+                    android:id="@+id/mine_custom_service"
+                    android:layout_width="match_parent"
+                    android:layout_height="47dp"
+                    android:visibility="invisible"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/size_30">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="@string/custom_service"
+                        android:src="@mipmap/custom_service"
+                        android:tint="@color/green" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/size_20"
+                        android:layout_weight="1"
+                        android:text="@string/custom_service"
+                        android:textColor="@color/color_333"
+                        android:textSize="@dimen/size_17" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/common_padding"
+                        android:contentDescription="@string/next"
+                        android:src="@mipmap/next_page"
+                        android:tint="@color/green" />
+                </LinearLayout>
+
+                <include layout="@layout/horizontal_line"
+                    android:visibility="invisible"/>
+
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+    <Button
+        android:id="@+id/mine_logout"
+        style="@style/make_sure_bth_style"
+        android:layout_width="match_parent"
+        android:background="@drawable/button_gray_5_solid"
+        android:layout_height="@dimen/btn_height"
+        android:layout_marginRight="@dimen/size_50"
+        android:onClick="onClick"
+        android:layout_marginBottom="@dimen/size_50"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="@dimen/size_55"
+        android:text="@string/logout" />
+</RelativeLayout>

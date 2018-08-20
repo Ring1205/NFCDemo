@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_label_name"
+        style="@style/text_title_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/size_10"
+        android:layout_marginTop="@dimen/size_30"
+        android:text="标签名称：5号标签" />
+
+    <TextView
+        android:id="@+id/tv_label_num"
+        style="@style/text_title_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/size_10"
+        android:layout_marginTop="@dimen/size_8"
+        android:text="标签编号：c2386fb6-5660-44fd-ab50-63eb45cc0ad1" />
+
+    <TextView
+        android:id="@+id/tv_add_time"
+        style="@style/textstyle_15dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/size_25"
+        android:layout_marginTop="@dimen/size_8"
+        android:maxLines="5"
+        android:text="添加时间：2018-08-10 15:37" />
+
+    <TextView
+        android:id="@+id/tv_install_address"
+        style="@style/textstyle_15dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/size_25"
+        android:layout_marginTop="@dimen/size_8"
+        android:maxLines="5"
+        android:text="安装位置：哈哈哈hi和覅飒飒开了房间" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:background="@color/divider_line_color"
+        android:layout_marginLeft="@dimen/size_32"
+        android:layout_marginRight="@dimen/size_32"
+        android:layout_marginTop="@dimen/size_18"
+        android:layout_marginBottom="@dimen/size_18"
+        android:layout_height="match_parent">
+        <TextView
+            style="@style/text_title_style"
+            android:layout_width="match_parent"
+            android:background="@color/color_ccc"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/size_8"
+            android:gravity="center_vertical"
+            android:paddingTop="@dimen/size_6"
+            android:paddingBottom="@dimen/size_6"
+            android:text="关联设备：" />
+
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:id="@+id/recyclerView"
+            android:layout_height="match_parent"/>
+
+    </LinearLayout>
+
+</LinearLayout>

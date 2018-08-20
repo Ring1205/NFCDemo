@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="@dimen/common_padding"
+    android:paddingLeft="@dimen/common_padding"
+    android:paddingBottom="@dimen/common_padding"
+    tools:ignore="RelativeOverlap,RtlHardcoded,RtlSymmetry,SpUsage">
+
+    <TextView
+        android:id="@+id/tabel_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:textColor="@color/text_color"
+        android:textSize="@dimen/size_17" />
+
+    <TextView
+        android:id="@+id/tabel_state"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tabel_name"
+        android:layout_marginTop="@dimen/size_8"
+        android:maxLines="1"
+        android:textSize="@dimen/size_17" />
+
+    <ImageView
+        android:id="@+id/delete_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:contentDescription="@string/delete"
+        android:padding="@dimen/common_padding"
+        android:src="@mipmap/delete"
+        android:tint="@color/red" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_alignBottom="@+id/tabel_state"
+        android:background="@null"
+        android:id="@+id/rl_background"
+        android:layout_toLeftOf="@+id/delete_img"
+        android:layout_height="match_parent"/>
+</RelativeLayout>

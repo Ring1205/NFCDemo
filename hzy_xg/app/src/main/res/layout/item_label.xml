@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/tv_device_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/size_16"
+        android:layout_marginLeft="@dimen/size_14"
+        android:layout_toLeftOf="@+id/tv_checkbox"
+        android:text="设备名：楼成标准灯"
+        style="@style/textstyle_12dp" />
+
+    <TextView
+        android:id="@+id/tv_device_state"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/size_6"
+        android:paddingRight="@dimen/size_10"
+        android:layout_below="@+id/tv_device_name"
+        android:layout_marginLeft="@dimen/size_14"
+        android:text="设备编号：3804abc9caa44722a041e0394fbdc7ad"
+        style="@style/textstyle_12dp" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_marginLeft="@dimen/size_15"
+        android:layout_marginRight="@dimen/size_15"
+        android:layout_below="@id/tv_device_state"
+        style="@style/view_1dp_ccc" />
+
+</RelativeLayout>

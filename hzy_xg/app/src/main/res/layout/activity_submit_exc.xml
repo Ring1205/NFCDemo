@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:ignore="SpUsage">
+
+        <TextView
+            android:id="@+id/submit_project"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/common_padding"
+            android:text="设备名称：大大摄像头"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/size_15" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/common_padding"
+                android:paddingBottom="@dimen/common_padding"
+                android:paddingTop="@dimen/common_padding"
+                android:text="设备状态："
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/size_15" />
+
+            <Spinner
+                android:id="@+id/spinner_state"
+                android:layout_width="match_parent"
+                android:padding="@dimen/size_6"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="@dimen/size_37"
+                android:background="@drawable/corner_gray_4_hollow_gray"
+                android:entries="@array/spinner_style"
+                android:layout_height="wrap_content"></Spinner>
+        </LinearLayout>
+
+        <include
+            layout="@layout/horizontal_line"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_5" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size_30"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    tools:ignore="UseCompoundDrawables">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/common_padding"
+                        android:layout_marginStart="@dimen/common_padding"
+                        android:layout_weight="1"
+                        android:text="现场照片："
+                        android:textColor="@color/text_color"
+                        android:textSize="@dimen/size_15" />
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:descendantFocusability="blocksDescendants">
+
+                    <com.zxycloud.hzy_xg.widget.BswRecyclerView.BswRecyclerView
+                        android:id="@+id/picture_list"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/common_padding" />
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    style="@style/text_title_style"
+                    android:text="设备详情："
+                    android:layout_marginTop="@dimen/size_10"
+                    android:layout_height="wrap_content" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:id="@+id/et_exc_describe"
+                    android:background="@drawable/corner_gray_4_hollow_gray"
+                    android:gravity="top|left"
+                    android:padding="@dimen/size_6"
+                    android:textSize="@dimen/size_14"
+                    android:hint="请详细描述设备情况"
+                    android:layout_marginTop="@dimen/size_10"
+                    android:layout_marginLeft="@dimen/size_20"
+                    android:layout_marginRight="@dimen/size_20"
+                    android:layout_height="@dimen/size_150" />
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/add_attachments_dialog"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black_80"
+        android:orientation="vertical"
+        android:visibility="gone"
+        tools:ignore="SpUsage">
+
+        <TextView
+            android:id="@+id/capture"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/album"
+            android:layout_marginBottom="@dimen/line_height"
+            android:background="@android:color/white"
+            android:gravity="center"
+            android:padding="@dimen/size_8"
+            android:text="@string/capture"
+            android:textSize="@dimen/size_17" />
+
+        <TextView
+            android:id="@+id/album"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/line_height"
+            android:background="@android:color/white"
+            android:gravity="center"
+            android:padding="@dimen/size_8"
+            android:text="@string/album"
+            android:textSize="@dimen/size_17" />
+    </RelativeLayout>
+
+</RelativeLayout>

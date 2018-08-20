@@ -1,0 +1,200 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 27
+    defaultConfig {
+        applicationId "com.zxycloud.hzy_xg"
+        minSdkVersion 15
+        targetSdkVersion 27
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+        ndk {
+            //选择要添加的对应cpu类型的.so库。
+            abiFilters 'armeabi', 'armeabi-v7a', 'arm64-v8a'
+            // 还可以添加 'x86', 'x86_64', 'mips', 'mips64'
+        }
+
+        manifestPlaceholders = [
+                JPUSH_PKGNAME : applicationId,
+                JPUSH_APPKEY : "17f75047db7507e560d6ace2", //JPush上注册的包名对应的appkey.
+                JPUSH_CHANNEL : "developer-default", //暂时填写默认值即可.
+        ]
+    }
+    buildTypes {
+        debug {
+            //启用代码混淆
+            minifyEnabled false
+            //混淆规则配置文件
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+
+            // 网络请求
+            // SSO接口
+            buildConfigField "String", "ssoUrl", project.properties['SSO_URL_DEV']
+            // 权限接口
+            buildConfigField "String", "permissionUrl", project.properties['PERMISSION_URL_DEV']
+            // 巡更业务接口
+            buildConfigField "String", "patrolUrl", project.properties['PATROL_URL_DEV']
+            // 文件上传接口
+            buildConfigField "String", "uploadImg", project.properties['UPLOAD_IMG']
+            buildConfigField "String", "fileUrl", project.properties['FILE_URL_DEV']
+            // 错误日志上传接口
+            buildConfigField "String", "logUrl", project.properties['LOG_URL_DEV']
+            // 极光ID上传
+            buildConfigField "String", "setPushId", project.properties['SET_PUSH_ID']
+
+            // 获取IP尾址
+            buildConfigField "String", "ipAction", project.properties['IP_ACTION']
+            // 获取SSL IP尾址
+            buildConfigField "String", "ipActionSSL", project.properties['IP_ACTION_SSL']
+            // 网络请求成功
+            buildConfigField "String", "isSuccessful", project.properties['IS_SUCCESSFUL']
+
+            // 登出错误码
+            buildConfigField "String", "logOutCode1", project.properties['LOG_OUT_CODE_1']
+            buildConfigField "String", "logOutCode2", project.properties['LOG_OUT_CODE_2']
+            buildConfigField "String", "logOutCode3", project.properties['LOG_OUT_CODE_3']
+
+            // 尾址
+            buildConfigField "String", "getUserInfo", project.properties['GET_USER_INFO']
+            buildConfigField "String", "login", project.properties['LOGIN']
+            buildConfigField "String", "logout", project.properties['LOGOUT']
+            buildConfigField "String", "getToken", project.properties['GET_TOKEN']
+
+            //nfc标签
+            buildConfigField "String", "addLabel", project.properties['MARK_ADDMARK']
+            buildConfigField "String", "deleteLabel", project.properties['MARK_DELETEMARK']
+            buildConfigField "String", "labelList", project.properties['MARK_MARKLIST']
+            buildConfigField "String", "isExist", project.properties['MARK_VALIDATEMARKEXIST']
+            buildConfigField "String", "labelDetail", project.properties['MARK_GETMARKDETAIL']
+
+            //计划
+            buildConfigField "String", "planList", project.properties['PLAN_PLANLIST']
+            buildConfigField "String", "planDetail", project.properties['PLAN_PLANDETAIL']
+
+            //任务
+            buildConfigField "String", "taskList", project.properties['TASK_TASKLIST']
+            buildConfigField "String", "taskdetail", project.properties['TASK_TASKDETAIL']
+            buildConfigField "String", "taskScanList", project.properties['TASK_SCANMARKTASKLIST']
+            buildConfigField "String", "taskSubmit", project.properties['TASK_SETTASKFINISHSTATUS']
+            buildConfigField "String", "taskLately", project.properties['TASK_LATELYTASKLIST']
+
+            //设备
+            buildConfigField "String", "deviceList", project.properties['TASK_TASKDEVICELIST']
+            buildConfigField "String", "deviceDetails", project.properties['DEVICE_DEVICEDETAIL']
+            buildConfigField "String", "taskDeviceList", project.properties['MARK_MARKDEVICELIST']
+
+            //上报异常
+            buildConfigField "String", "submitFault", project.properties['SUBMIT_FAULT']
+
+            //极光推送
+            buildConfigField "String", "alarmtaskList", project.properties['TASK_ALARMTASKLIST']
+
+            buildConfigField "boolean", "isDebug", project.properties['IS_DEBUG']
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+
+        release {
+            //启用代码混淆
+            minifyEnabled false
+            //是否优化zip
+            zipAlignEnabled true
+            // 移除无用的resource文件
+            shrinkResources false
+            //混淆规则配置文件
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+
+            // 网络请求
+            // SSO接口
+            buildConfigField "String", "ssoUrl", project.properties['SSO_URL_DEV']
+            // 权限接口
+            buildConfigField "String", "permissionUrl", project.properties['PERMISSION_URL_DEV']
+            // 巡更业务接口
+            buildConfigField "String", "patrolUrl", project.properties['PATROL_URL_DEV']
+            // 文件上传接口
+            buildConfigField "String", "uploadImg", project.properties['UPLOAD_IMG']
+            buildConfigField "String", "fileUrl", project.properties['FILE_URL_DEV']
+            // 错误日志上传接口
+            buildConfigField "String", "logUrl", project.properties['LOG_URL_DEV']
+            // 极光ID上传
+            buildConfigField "String", "setPushId", project.properties['SET_PUSH_ID']
+
+            // 获取IP尾址
+            buildConfigField "String", "ipAction", project.properties['IP_ACTION']
+            // 获取SSL IP尾址
+            buildConfigField "String", "ipActionSSL", project.properties['IP_ACTION_SSL']
+            // 网络请求成功
+            buildConfigField "String", "isSuccessful", project.properties['IS_SUCCESSFUL']
+
+            // 登出错误码
+            buildConfigField "String", "logOutCode1", project.properties['LOG_OUT_CODE_1']
+            buildConfigField "String", "logOutCode2", project.properties['LOG_OUT_CODE_2']
+            buildConfigField "String", "logOutCode3", project.properties['LOG_OUT_CODE_3']
+
+            // 尾址
+            buildConfigField "String", "getUserInfo", project.properties['GET_USER_INFO']
+            buildConfigField "String", "login", project.properties['LOGIN']
+            buildConfigField "String", "logout", project.properties['LOGOUT']
+            buildConfigField "String", "getToken", project.properties['GET_TOKEN']
+
+            //nfc标签
+            buildConfigField "String", "addLabel", project.properties['MARK_ADDMARK']
+            buildConfigField "String", "deleteLabel", project.properties['MARK_DELETEMARK']
+            buildConfigField "String", "labelList", project.properties['MARK_MARKLIST']
+            buildConfigField "String", "isExist", project.properties['MARK_VALIDATEMARKEXIST']
+            buildConfigField "String", "labelDetail", project.properties['MARK_GETMARKDETAIL']
+
+            //计划
+            buildConfigField "String", "planList", project.properties['PLAN_PLANLIST']
+            buildConfigField "String", "planDetail", project.properties['PLAN_PLANDETAIL']
+
+            //任务
+            buildConfigField "String", "taskList", project.properties['TASK_TASKLIST']
+            buildConfigField "String", "taskdetail", project.properties['TASK_TASKDETAIL']
+            buildConfigField "String", "taskScanList", project.properties['TASK_SCANMARKTASKLIST']
+            buildConfigField "String", "taskSubmit", project.properties['TASK_SETTASKFINISHSTATUS']
+            buildConfigField "String", "taskLately", project.properties['TASK_LATELYTASKLIST']
+
+            //设备
+            buildConfigField "String", "deviceList", project.properties['TASK_TASKDEVICELIST']
+            buildConfigField "String", "deviceDetails", project.properties['DEVICE_DEVICEDETAIL']
+            buildConfigField "String", "taskDeviceList", project.properties['MARK_MARKDEVICELIST']
+
+            //上报异常
+            buildConfigField "String", "submitFault", project.properties['SUBMIT_FAULT']
+
+            //极光推送
+            buildConfigField "String", "alarmtaskList", project.properties['TASK_ALARMTASKLIST']
+
+        buildConfigField "boolean", "isDebug", project.properties['IS_RELEASE']
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    configurations.all {
+        resolutionStrategy.force 'com.android.support:support-annotations:27.1.0'
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'com.android.support:appcompat-v7:27.1.0'
+    implementation 'com.android.support:design:27.1.0'
+    implementation 'com.android.support:cardview-v7:27.1.0'
+    implementation 'com.android.support:support-v4:27.1.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.2'
+    implementation 'com.squareup.retrofit2:retrofit:2.3.0'
+    implementation 'com.squareup.okhttp3:okhttp-urlconnection:3.2.0'
+    implementation 'io.reactivex.rxjava2:rxjava:2.1.1'
+    implementation 'io.reactivex.rxjava2:rxandroid:2.0.1'
+    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.3.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.3.0'
+    implementation 'com.github.bumptech.glide:glide:4.6.1'
+    implementation 'com.google.code.gson:gson:2.8.1'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    implementation files('libs/flame.jar')
+    implementation 'cn.jiguang.sdk:jpush:3.1.5'  // 此处以JPush 3.1.5 版本为例。
+    implementation 'cn.jiguang.sdk:jcore:1.2.3'  // 此处以JCore 1.2.3 版本为例。
+}

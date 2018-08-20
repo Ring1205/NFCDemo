@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingTop="@dimen/size_30"
+    tools:context="com.zxycloud.hzy_xg.ui.activity.IpResetActivity"
+    tools:ignore="RtlHardcoded,RtlSymmetry,SpUsage,ContentDescription">
+
+    <ImageView
+        android:id="@+id/make_cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/back"
+        android:padding="@dimen/common_padding"
+        android:src="@mipmap/back"
+        android:tint="@android:color/black" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/size_6"
+        android:padding="@dimen/common_padding"
+        android:text="@string/login_set"
+        android:textColor="@color/text_color"
+        android:textSize="@dimen/size_17" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/login_item_height"
+        android:layout_marginTop="75dp"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="@dimen/login_item_height"
+            android:layout_height="@dimen/login_item_height"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:contentDescription="@string/ip_address_hint"
+                android:src="@mipmap/ip" />
+        </RelativeLayout>
+
+        <com.zxycloud.hzy_xg.widget.MultifunctionalEditText
+            android:id="@+id/ip_address_et"
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@null"
+            android:hint="@string/ip_address_hint"
+            android:paddingLeft="@dimen/size_8"
+            android:paddingRight="@dimen/common_padding"
+            android:singleLine="true"
+            android:textColorHint="@color/color_666"
+            android:textSize="@dimen/size_15" />
+    </LinearLayout>
+
+    <include layout="@layout/horizontal_line" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/login_item_height"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="@dimen/login_item_height"
+            android:layout_height="@dimen/login_item_height"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:contentDescription="@string/ip_port_hint"
+                android:src="@mipmap/port" />
+        </RelativeLayout>
+
+        <com.zxycloud.hzy_xg.widget.MultifunctionalEditText
+            android:id="@+id/ip_port_et"
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@null"
+            android:hint="@string/ip_port_hint"
+            android:inputType="number"
+            android:paddingLeft="@dimen/size_8"
+            android:paddingRight="@dimen/common_padding"
+            android:singleLine="true"
+            android:textColorHint="@color/color_666"
+            android:textSize="@dimen/size_15" />
+    </LinearLayout>
+
+    <include layout="@layout/horizontal_line" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/login_item_height"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/common_padding"
+            android:text="@string/https"
+            android:textColor="@android:color/black" />
+
+        <RelativeLayout
+            android:id="@+id/ip_https_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingLeft="@dimen/common_padding"
+            android:paddingRight="@dimen/common_padding">
+
+            <com.zxycloud.hzy_xg.widget.MyCheckBox
+                android:id="@+id/ip_https"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:textColorHint="@color/color_666" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <include layout="@layout/horizontal_line" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1">
+
+        <Button
+            android:id="@+id/make_sure_btn"
+            style="@style/make_sure_bth_style"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/btn_height"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/login_bottom"
+            android:text="@string/confirm" />
+    </RelativeLayout>
+</LinearLayout>

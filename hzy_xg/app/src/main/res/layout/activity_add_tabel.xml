@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@null">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/text_title_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/size_18"
+                android:text="标签名称：" />
+
+            <EditText
+                android:id="@+id/et_table_name"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_40"
+                android:layout_margin="@dimen/size_10"
+                android:background="@drawable/corner_gray_4_hollow_gray"
+                android:gravity="left|center"
+                android:hint="请填写标签名称（必填）"
+                android:padding="@dimen/size_6"
+                android:textSize="@dimen/size_16" />
+
+            <TextView
+                style="@style/text_title_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="安装信息：" />
+
+            <EditText
+                android:id="@+id/et_table_address"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/add_equipment_btn_width"
+                android:layout_margin="@dimen/size_10"
+                android:background="@drawable/corner_gray_4_hollow_gray"
+                android:gravity="top|left"
+                android:hint="请填写地址信息"
+                android:padding="@dimen/size_6"
+                android:textSize="@dimen/size_16" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/size_18"
+                    android:layout_marginTop="@dimen/size_8"
+                    android:text="请上传图片，展示安装位置" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:paddingBottom="@dimen/size_150"
+                    android:paddingRight="@dimen/size_8">
+
+                    <include
+                        android:id="@+id/include"
+                        layout="@layout/item_img_rv_layout" />
+                </RelativeLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <Button
+        android:id="@+id/bt_scan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/size_20"
+        android:layout_marginLeft="@dimen/size_25"
+        android:layout_marginRight="@dimen/size_25"
+        android:background="@drawable/corner_green_35_solid"
+        android:onClick="onClick"
+        android:text="完成"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/size_16" />
+</RelativeLayout>

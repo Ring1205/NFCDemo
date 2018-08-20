@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.zxycloud.hzy_xg.ui.activity.MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:id="@+id/main_fragment"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_55"
+                android:background="@color/color_F0">
+
+                <View
+                    android:layout_width="@dimen/size_10"
+                    android:layout_height="match_parent"/>
+
+                <com.zxycloud.hzy_xg.widget.TabView
+                    android:id="@+id/main_home_tab"
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+
+                <com.zxycloud.hzy_xg.widget.TabView
+                    android:id="@+id/main_label_tab"
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+
+                <View
+                    android:layout_width="@dimen/size_50"
+                    android:layout_height="match_parent"/>
+
+                <com.zxycloud.hzy_xg.widget.TabView
+                    android:id="@+id/main_task_tab"
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+
+                <com.zxycloud.hzy_xg.widget.TabView
+                    android:id="@+id/main_mine_tab"
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+
+                <View
+                    android:layout_width="@dimen/size_10"
+                    android:layout_height="match_parent"/>
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/ib_scan"
+            android:layout_width="@dimen/size_60"
+            android:layout_height="@dimen/size_60"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:layout_marginBottom="@dimen/size_15"
+            android:background="@drawable/button_scan"
+            android:src="@mipmap/check_icon"/>
+        <Button
+            android:id="@+id/bt_scan"
+            android:visibility="gone"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_width="@dimen/size_70"
+            android:background="@drawable/button_scan"
+            android:text="☠"
+            android:textSize="@dimen/size_50"
+            android:gravity="center"
+            android:paddingBottom="@dimen/size_3"
+            android:paddingRight="@dimen/size_1"
+            android:paddingLeft="@dimen/size_1"
+            android:textColor="@android:color/white"
+            android:layout_marginBottom="@dimen/size_15"
+            android:layout_height="@dimen/size_70" />
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>

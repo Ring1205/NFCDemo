@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:paddingTop="@dimen/size_16"
+    android:paddingRight="@dimen/size_16"
+    android:paddingLeft="@dimen/size_16"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/tv_plan_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/text_title_style"
+        android:text="计划标题："/>
+
+    <TextView
+        android:id="@+id/tv_plan_type"
+        android:layout_width="wrap_content"
+        android:textSize="@dimen/size_13"
+        android:textColor="@color/text_color"
+        android:singleLine="true"
+        android:text="类型：每月巡查"
+        android:layout_alignBottom="@+id/tv_create_time"
+        android:layout_marginRight="@dimen/size_15"
+        android:layout_alignParentRight="true"
+        android:ellipsize="end"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/tv_create_time"
+        android:layout_below="@+id/tv_plan_name"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="@dimen/size_8"
+        android:layout_height="wrap_content"
+        style="@style/text_title_style"
+        android:text="创建日期：2018-11-10  12:30:00"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/tv_create_time"
+        android:layout_marginTop="@dimen/size_16"
+        android:background="@color/color_ccc"/>
+</RelativeLayout>

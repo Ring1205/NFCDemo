@@ -1,0 +1,114 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/title_bg</item>
+        <item name="colorPrimaryDark">@color/title_bg</item>
+        <item name="colorAccent">@color/main_color</item>
+        <item name="android:windowAnimationStyle">@style/activityAnimation</item>
+    </style>
+
+    <style name="activityAnimation" parent="@android:style/Animation">
+        <item name="android:activityOpenEnterAnimation">@anim/slide_right_in</item>
+        <item name="android:activityOpenExitAnimation">@anim/slide_left_out</item>
+        <item name="android:activityCloseEnterAnimation">@anim/slide_left_in</item>
+        <item name="android:activityCloseExitAnimation">@anim/slide_right_out</item>
+    </style>
+
+    <style name="SplashTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:background">@mipmap/splash_img</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="CustomCheckboxTheme" parent="@android:style/Widget.CompoundButton.CheckBox">
+        <item name="android:button">@drawable/check_box</item>
+        <item name="android:clickable">false</item>
+    </style>
+
+    <style name="CustomAllCheckboxTheme" parent="@android:style/Widget.CompoundButton.CheckBox">
+        <item name="android:button">@drawable/all_check_box</item>
+        <item name="android:clickable">false</item>
+    </style>
+
+    <style name="time_dialog" parent="android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowBackground">@android:color/white</item>
+    </style>
+
+    <style name="make_sure_bth_style" parent="@style/Widget.AppCompat.Button.Borderless">
+        <item name="android:textSize">@dimen/size_18</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:background">@color/title_bg</item>
+        <item name="android:height">@dimen/size_50</item>
+    </style>
+
+    <style name="RemeberAccountCheckboxTheme" parent="@android:style/Widget.CompoundButton.CheckBox">
+        <item name="android:button">@drawable/remeber_account_check_box</item>
+        <item name="android:clickable">false</item>
+    </style>
+
+    <!--网络访问进度条-->
+    <style name="progress_dialog_loading" parent="@android:style/Theme.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+
+    <style name="edit_style">
+        <item name="android:textSize">@dimen/size_15</item>
+        <item name="android:textColor">@color/text_color</item>
+        <item name="android:textColorHint">@color/hint_color</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:background">@null</item>
+    </style>
+
+    <style name="text_title_style">
+        <item name="android:paddingLeft">@dimen/common_padding</item>
+        <item name="android:paddingRight">@dimen/common_padding</item>
+        <item name="android:textSize">@dimen/size_15</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:textColor">@color/text_color</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:gravity">center_vertical|left</item>
+    </style>
+
+    <style name="textstyle_15dp">
+        <item name="android:textColor">@color/text_color</item>
+        <item name="android:textSize">@dimen/size_15</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:paddingRight">@dimen/common_padding</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:gravity">left|center</item>
+    </style>
+
+    <style name="textstyle_12dp">
+        <item name="android:textColor">@color/text_color</item>
+        <item name="android:textSize">@dimen/size_12</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:paddingRight">@dimen/common_padding</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:gravity">left|center</item>
+    </style>
+
+    <style name="textstyle_14dp_gray">
+        <item name="android:ellipsize">end</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:gravity">left|center</item>
+        <item name="android:textColor">@color/text_gray_color</item>
+        <item name="android:textSize">@dimen/size_14</item>
+        <item name="android:paddingRight">@dimen/size_15</item>
+    </style>
+
+    <style name="view_1dp_ccc">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:layout_marginTop">@dimen/size_14</item>
+        <item name="android:background">@color/color_ccc</item>
+    </style>
+</resources>

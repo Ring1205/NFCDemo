@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@android:color/white"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="wrap_content"
+        style="@style/text_title_style"
+        android:text="任务备注："
+        android:layout_marginTop="@dimen/size_37"
+        android:layout_marginLeft="@dimen/size_25"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:id="@+id/et_task_describe"
+        android:background="@drawable/corner_gray_4_hollow_gray"
+        android:gravity="top|left"
+        android:padding="@dimen/size_6"
+        android:textSize="@dimen/size_14"
+        android:hint="请填写任务描述"
+        android:layout_marginTop="@dimen/size_10"
+        android:layout_marginLeft="@dimen/size_37"
+        android:layout_marginRight="@dimen/size_37"
+        android:layout_height="@dimen/add_equipment_btn_width" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/size_37"
+            android:layout_marginLeft="@dimen/size_25"
+            android:layout_marginRight="@dimen/size_25"
+            android:background="@drawable/button_green_5_solid"
+            android:onClick="onClick"
+            android:text="提交"
+            android:id="@+id/bt_submit"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/size_16" />
+    </RelativeLayout>
+</LinearLayout>

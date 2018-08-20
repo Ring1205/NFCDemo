@@ -1,0 +1,212 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="@dimen/size_30"
+    tools:context="com.zxycloud.hzy_xg.ui.activity.LoginActivity"
+    tools:ignore="RtlHardcoded,RtlSymmetry,SpUsage,ContentDescription">
+
+    <!--背景色在BaseActivity中已经设置-->
+
+    <ImageView
+        android:id="@+id/login_set"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:contentDescription="@string/ip_set"
+        android:padding="@dimen/common_padding"
+        android:src="@mipmap/setting" />
+
+    <ImageView
+        android:id="@+id/login_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="78dp"
+        android:contentDescription="@string/app_logo" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/login_logo"
+        android:layout_marginTop="60dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/login_item_height"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="@dimen/login_item_height"
+                android:layout_height="match_parent"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/account_hint"
+                    android:src="@mipmap/account" />
+            </RelativeLayout>
+
+            <com.zxycloud.hzy_xg.widget.MultifunctionalEditText
+                android:id="@+id/login_account"
+                style="@style/edit_style"
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:digits="@string/login_format"
+                android:hint="@string/account_hint"
+                android:maxLength="32"
+                android:paddingRight="@dimen/common_padding"
+                android:singleLine="true" />
+
+            <ImageView
+                android:id="@+id/show_history_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:contentDescription="@string/open"
+                android:padding="@dimen/common_padding"
+                android:src="@mipmap/down" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/login_linear"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <include layout="@layout/horizontal_line" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/login_item_height"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="@dimen/login_item_height"
+                        android:layout_height="match_parent"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:contentDescription="@string/password_hint"
+                            android:src="@mipmap/password"
+                            android:tint="#9000" />
+                    </RelativeLayout>
+
+                    <com.zxycloud.hzy_xg.widget.MultifunctionalEditText
+                        android:id="@+id/login_password"
+                        style="@style/edit_style"
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:hint="@string/password_hint"
+                        android:inputType="textPassword"
+                        android:paddingRight="@dimen/common_padding"
+                        android:singleLine="true" />
+                </LinearLayout>
+
+                <include layout="@layout/horizontal_line" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_padding"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:id="@+id/remember_check"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <CheckBox
+                            android:id="@+id/remember_password"
+                            style="@style/RemeberAccountCheckboxTheme"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginStart="15dp"
+                            android:gravity="center" />
+
+                        <TextView
+                            android:id="@+id/remember_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="@dimen/size_8"
+                            android:layout_toRightOf="@+id/remember_password"
+                            android:text="@string/remember_password"
+                            android:textColor="@color/gray"
+                            android:textSize="@dimen/size_14" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/login_forget_password"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:gravity="center"
+                        android:paddingLeft="@dimen/common_padding"
+                        android:paddingRight="@dimen/common_padding"
+                        android:text="@string/forget_password"
+                        android:textColor="@color/gray"
+                        android:textSize="@dimen/size_14"
+                        android:visibility="gone"
+                        tools:ignore="RelativeOverlap" />
+                </RelativeLayout>
+
+                <Button
+                    android:id="@+id/login_btn"
+                    style="@style/make_sure_bth_style"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/btn_height"
+                    android:layout_marginTop="@dimen/size_50"
+                    android:text="@string/login" />
+
+                <LinearLayout
+                    android:id="@+id/not_register"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/size_15"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="@dimen/common_padding"
+                        android:text="@string/not_account"
+                        android:textColor="@color/color_666"
+                        android:textSize="@dimen/size_14" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="@dimen/common_padding"
+                        android:text="@string/register"
+                        android:textColor="@color/text_color"
+                        android:textSize="@dimen/size_14" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <ListView
+                android:id="@+id/history_phone_lv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/size_37"
+                android:layout_marginRight="@dimen/size_37"
+                android:visibility="gone" />
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,104 @@
+<resources>
+    <string name="app_name">火之眼巡检版</string>
+    <string name="confirm_abandon">确认放弃当前操作</string>
+    <string name="cancel">取消</string>
+    <string name="confirm">确认</string>
+
+    <string name="no_data">添加</string>
+    <string name="no_net">刷新</string>
+
+    <string name="data_abnormal">参数异常</string>
+    <string name="back">返回</string>
+    <string name="add_device">添加设备</string>
+
+    <!--登录页-->
+    <string name="ip_set">设置服务器</string>
+    <string name="enter_the_account">请输入账号</string>
+    <string name="enter_the_password">请输入密码</string>
+    <string name="account_is_abnormal">账户异常，请重新登录</string>
+    <string name="app_logo">火知眼APP Logo</string>
+    <string name="account_hint">请输入账号</string>
+    <string name="password_hint">请输入密码</string>
+    <string name="login">登录</string>
+    <string name="forget_password">忘记密码?</string>
+    <string name="remember_password">记住密码</string>
+    <string name="register">注册</string>
+    <string name="not_account">还没有账号？</string>
+    <string name="open">开启</string>
+    <string name="login_format">0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ-_.@</string>
+    <string name="close">关闭</string>
+
+    <!--登录设置页面-->
+    <string name="login_set">登录设置</string>
+    <string name="https">HTTPS加密</string>
+    <string name="ip_address_hint">请输入服务器地址</string>
+    <string name="ip_port_hint">请输入端口号</string>
+    <string name="server_address_error">服务器地址错误</string>
+    <string name="enter_the_domain_name">请输入域名</string>
+    <string name="failed_to_set_up_the_server">服务器设置失败，请重新设置</string>
+
+    <!--时间选择器-->
+    <string name="choose_time">请选择时间</string>
+    <string name="year">年</string>
+    <string name="month">月</string>
+    <string name="day">日</string>
+    <string name="hour">时</string>
+    <string name="minute">分</string>
+
+    <!--dialog-->
+    <string name="network_is_unavailable">当前网络不可用，请确认后再试</string>
+
+    <!--toast-->
+    <string name="operation_error">运行错误，请重试</string>
+    <string name="operation_success">运行成功</string>
+    <string name="delete">删除</string>
+    <string name="file_error">获取失败，请重新获取</string>
+    <string name="data_anomaly_to_use">数据异常，无法执行该操作</string>
+    <string name="is_loading">请稍后</string>
+
+    <!-- fragment -->
+    <string name="home_title">巡检计划</string>
+    <string name="label_title">标签列表</string>
+    <string name="label_detail">标签详情</string>
+    <string name="task_title">任务中心</string>
+    <string name="device_submit">上报异常</string>
+    <string name="task_list_title">任务列表</string>
+    <string name="task_details">任务详情</string>
+    <string name="mine_title">个人中心</string>
+    <string name="device_list">设备列表</string>
+    <string name="device_details">设备详情</string>
+
+    <string name="logout">退出登录</string>
+    <string name="next">下一步</string>
+    <string name="questions">常见问题</string>
+    <string name="custom_service">客服电话</string>
+    <string name="about_me">个人信息</string>
+
+    <string name="log_out">是否退出APP？</string>
+    <string name="subimt">提交</string>
+    <string name="log_out_current_account">确认退出当前账号吗？</string>
+    <string name="make_sure_delete_label">确认删除该标签</string>
+    <string name="whether_the_network_is_connected">网络异常，请检查网络是否连接</string>
+    <string name="scan_nfc">NFC校验</string>
+    <string name="scan_task">设备巡查</string>
+    <string name="scan_task_list">查看设备</string>
+    <string name="all_loaded">已全部加载</string>
+    <string name="task_submit">任务提交</string>
+
+    <string name="video">视频：</string>
+    <string name="capture">拍照</string>
+    <string name="album">相册</string>
+    <string name="second">秒</string>
+    <string name="clean">清除</string>
+    <string name="add">添加</string>
+    <string name="play_video">播放视频</string>
+    <string name="recording">语音：</string>
+    <string name="begin_recording">长按录音</string>
+    <string name="message_report">信息上报</string>
+    <string name="submit">提交</string>
+    <string name="is_uploading">正在上传中，请稍候</string>
+    <string name="picture_preview">图片预览</string>
+    <string name="permission_denied">您拒绝了权限</string>
+    <string name="data_anomaly">数据异常</string>
+    <string name="exception_submit">"清填写异常信息"</string>
+</resources>

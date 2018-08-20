@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_device_name"
+        style="@style/text_title_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/size_10"
+        android:layout_marginTop="@dimen/size_30"
+        android:text="设备名称：5号楼巡检任务" />
+
+    <TextView
+        android:id="@+id/tv_device_number"
+        style="@style/text_title_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/size_10"
+        android:layout_marginTop="@dimen/size_8"
+        android:text="设备编号：063e7486-079b" />
+
+    <TextView
+        android:id="@+id/tv_device_type"
+        style="@style/text_title_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/size_10"
+        android:layout_marginTop="@dimen/size_8"
+        android:text="设备类型：点型光电感烟火灾探测器" />
+
+    <TextView
+        android:id="@+id/tv_device_state"
+        style="@style/text_title_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/size_10"
+        android:layout_marginTop="@dimen/size_8"
+        android:text="设备状态：正常工作" />
+
+
+    <TextView
+        android:id="@+id/tv_device_address"
+        style="@style/text_title_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/size_10"
+        android:layout_marginTop="@dimen/size_8"
+        android:text="安装位置：五楼电梯口" />
+    <TextView
+        android:id="@+id/tv_installlocation"
+        style="@style/text_title_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/size_10"
+        android:layout_marginTop="@dimen/size_8"
+        android:text="位置详情：五楼电梯口" />
+
+    <TextView
+        android:id="@+id/tv_device_adapter"
+        style="@style/text_title_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/size_10"
+        android:layout_marginTop="@dimen/size_8"
+        android:text="网络适配器：01_NB_18062801010100367078NB设备" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:id="@+id/ll_type"
+            android:layout_alignParentBottom="true"
+            android:layout_height="wrap_content">
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginBottom="@dimen/size_37"
+                android:layout_marginLeft="@dimen/size_25"
+                android:layout_marginRight="@dimen/size_25"
+                android:background="@drawable/button_yellow_5_solid"
+                android:onClick="onClick"
+                android:text="异常申报"
+                android:id="@+id/bt_declare"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/size_16" />
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginBottom="@dimen/size_37"
+                android:layout_marginLeft="@dimen/size_25"
+                android:layout_marginRight="@dimen/size_25"
+                android:background="@drawable/button_green_5_solid"
+                android:onClick="onClick"
+                android:text="设备正常"
+                android:id="@+id/bt_ok"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/size_16" />
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

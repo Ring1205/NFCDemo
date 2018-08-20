@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tv_device_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/size_16"
+        android:layout_marginLeft="@dimen/size_14"
+        android:layout_toLeftOf="@+id/tv_checkbox"
+        android:text="设备名：楼成标准灯"
+        style="@style/textstyle_15dp" />
+
+    <TextView
+        android:id="@+id/tv_device_state"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/size_6"
+        android:paddingRight="@dimen/size_10"
+        android:layout_below="@+id/tv_device_name"
+        android:layout_marginLeft="@dimen/size_14"
+        android:text="设备状态：正常"
+        style="@style/textstyle_15dp" />
+
+    <ImageView
+        android:id="@+id/iv_state"
+        android:layout_marginTop="@dimen/size_6"
+        android:layout_below="@+id/tv_device_name"
+        android:layout_toRightOf="@+id/tv_device_state"
+        android:layout_width="@dimen/size_20"
+        android:layout_height="@dimen/size_20"
+        android:src="@mipmap/alert_normal"/>
+
+    <CheckBox
+        android:id="@+id/checkbox"
+        android:layout_width="wrap_content"
+        style="@style/CustomCheckboxTheme"
+        android:layout_alignTop="@+id/tv_device_name"
+        android:layout_alignParentRight="true"
+        android:clickable="false"
+        android:paddingRight="@dimen/size_15"
+        android:textColor="@color/text_color"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/tv_checkbox"
+        android:layout_width="wrap_content"
+        style="@style/text_title_style"
+        android:text="未检查"
+        android:gravity="top|center_vertical"
+        android:layout_alignBottom="@+id/checkbox"
+        android:layout_toLeftOf="@+id/checkbox"
+        android:paddingRight="@dimen/size_6"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/tv_device_address"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="@dimen/size_6"
+        android:layout_marginLeft="@dimen/size_14"
+        android:gravity="bottom"
+        android:layout_below="@+id/tv_device_state"
+        android:text="安装位置：翼之城三号楼3楼西北"
+        android:maxLines="2"
+        android:layout_height="wrap_content"
+        style="@style/textstyle_14dp_gray" />
+    
+    <View
+        android:id="@+id/view"
+        android:layout_below="@id/tv_device_address"
+        style="@style/view_1dp_ccc" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_above="@+id/view"
+        android:background="@null"
+        android:id="@+id/rl_background"
+        android:layout_height="match_parent"/>
+</RelativeLayout>
